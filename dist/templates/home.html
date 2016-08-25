@@ -1,11 +1,19 @@
-<html>
-<body>
-  <h1>Bloc Chat</h1>
-  
-<aside>
-     <ul>
-         <li ng-repeat="room in allRooms">{{ room }}</li>
-     </ul>
- </aside>
-</body>
-</html>
+<section class="jumbotron">
+     <h1 id="home-title">Bloc Chat</h1>
+ </section>
+
+ <section>
+ <div class="col-md-3 sidebar">
+     <div class="header">
+     <p class="title">List of Chat Rooms</p>
+     </div>
+ </div>
+ </section>
+
+ <section>
+     <section class="rooms-list">
+     <div ng-repeat="room in home.chatRooms" class="chatrooms">
+         <p>{{ room.name }}</p>
+     </div>
+     </section>
+ </section>
