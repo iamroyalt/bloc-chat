@@ -1,15 +1,14 @@
 (function() {
-  console.log("Room.js file")
-  function Room($firebaseArray) {
-    var firebaseRef = new Firebase("https://bloc-chat-efe8a.firebaseio.com")
-    var rooms = $firebaseArray(firebaseRef.child('rooms'));
+    function Rooms($firebaseArray) {
+        var firebaseRef = new Firebase("https://bloc-chat-efe8a.firebaseio.com");
+        var rooms = $firebaseArray(firebaseRef.child('rooms'));
 
-    return {
-      all: rooms
-    };
-  }
+        return {
+            all: rooms
+        };
+    }
 
-  angular
-    .module('blocChat')
-    .factory('Room', ['$firebaseArray', Room]);
+    angular
+        .module('blocChat')
+        .factory('Rooms', ['$firebaseArray', Rooms]);
 })();
