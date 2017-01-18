@@ -1,5 +1,5 @@
 (function() {
-    function RoomCtrl(Rooms) {
+    function RoomCtrl(Room) {
         ths.chatRooms = Room.rooms
     }
 
