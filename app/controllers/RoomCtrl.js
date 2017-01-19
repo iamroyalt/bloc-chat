@@ -1,9 +1,20 @@
 (function() {
-    function RoomCtrl(Rooms) {
-        ths.chatRooms = Room.rooms
-    }
+  function RoomCtrl($scope, $uibModal, Room) {
+    $scope.allRooms = Room.all;
+    $scope.open = function() {
 
-    angular
-        .module('blocChat')
-        .controller('RoomCtrl', RoomCtrl);
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: '/templates/newRoom.html',
+            controller: 'ModalCtrl'
+        });
+
+        modalInstance.result.then(function (newName) {
+            Room.createRoom(newName);
+        })
+  }
+
+  angular
+    .module('blocChat')
+    .controller(RoomCtrl['$scope', '$uibModal', 'Room']);
 })();

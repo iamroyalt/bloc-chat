@@ -1,15 +1,28 @@
 body {
-   background-color: #000000;
-   background-image: url(../assets/images/phonechat.jpg);
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center center;
-   background-size: 100% 510px;
+   background-size: cover;
    padding-bottom: 200px;
-   margin-top: 12%;
  }
 
- img {
-   boder: 0;
- }
- 
+h1 {
+  color: black;
+  font-size: 3em;
+}
+
+.chat-rooms {
+    right: 0%;
+    width: 15%;
+    background: #003366;
+    position: fixed;
+    height: 100%;
+    color: white;
+    text-align: right;
+}
+
+.hr {
+  padding-top: 5px;
+  margin-top: 10px;
+	border-top: 3px solid white;
+}

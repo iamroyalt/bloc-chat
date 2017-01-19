@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="blocChat">
-  <head lang="en">
+<head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/style.css">
-  </head>
-  <body>
-    <a ui-sref="rooms">
-      <img src="assets/images/phonechat.jpeg" alt="with responsive image feature" class="img-responsive">
-    </a>
-    <ui-view></ui-view>
+</head>
+<body>
+  <ui-view></ui-view>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
-    <script>
+  <script>
       // Initialize Firebase
       var config = {
         apiKey: "AIzaSyDd6jdI8fv10_j6KLhyHmNPdqAxd9Zeiu0",
@@ -32,9 +27,9 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/RoomCtrl.js"></script>
-    <script src="scripts/services/Room.js"></script>
-  </body>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/RoomCtrl.js"></script>
+    <script src="/scripts/services/Room.js"></script>
+</body>
 </html>
